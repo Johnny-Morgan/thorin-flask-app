@@ -13,35 +13,16 @@
     leave on other business, welcomed a fourteenth to fill into their party.
 </p>
 
+{% for member in company %}
 <div class="row featurette">
     <div class="col-md-7">
-        <h3>{{ company[0].name }}</h3>
-        <p>{{ company[0].description }}</p>
+        <h3>{{ member.name }}</h3>
+        <p>{{ member.description }}</p>
     </div>
     <div class="col-md-5">
-        <img src="{{ company[0].image_source }} " alt="">
+        <img src="{{ member.image_source }} " alt="" class="featurette-image image-responsive">
     </div>
 </div>
-
 <hr>
-
-<div class="row featurette">
-    <div class="col-md-5">
-        <img src="https://static.wikia.nocookie.net/lotr/images/b/b4/The-Hobbit-Fili-and-Kili.jpg" alt="">
-    </div>
-    <div class="col-md-7">
-        <h3>Fili and Kili</h3>
-        <p>
-            Fíli and Kíli were brothers, the youngest of the thirteen dwarves who set out with Thorin Oakenshield's
-            company,
-            along with Gandalf and Bilbo Baggins, to reclaim the Lonely Mountain from the dragon Smaug.
-
-            Fíli and Kíli were the two most active dwarves of Thorin's company, and apart from Balin, and possibly
-            Bombur, they
-            appeared more frequently as "individual" characters in Tolkien's novel than the rest of Thorin's companions,
-            who
-            were most often named only in "group" references to the entire company.
-        </p>
-    </div>
-</div>
-{% endblock%}
+{% endfor %}
+{% endblock %}
